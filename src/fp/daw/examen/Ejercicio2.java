@@ -11,8 +11,9 @@ public class Ejercicio2 {
 	 * contenga los mismos caracteres que ésta y en el mismo orden. 
 	 */
 	
-	public static ...
-	
+	/*
+	 * No necesito escribir un método así, ya existe uno que hace esto en la clase String
+	 */
 	
 	/*
 	 * 0,25 puntos
@@ -21,9 +22,16 @@ public class Ejercicio2 {
 	 * el método 'stringToArray' mostrando por pantalla el resultado de su ejecución. 
 	 */
 	
-	public static void main(String[] args) {
-		
-
+	static void mostrarVector(char [] vector) {
+		System.out.print("[");
+		for (int i=0; i<vector.length; i++)
+			System.out.print("'" + vector[i] + "'" + (i == vector.length - 1 ? "" : ", "));
+		System.out.println("]");
 	}
+	
+	public static void main(String[] args) {
+		mostrarVector("Hola Mundo".toCharArray());
+	}
+
 
 }
